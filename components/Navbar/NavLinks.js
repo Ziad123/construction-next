@@ -4,23 +4,26 @@ import React from "react";
 
 
 const NavLinkContainer = styled.div`
-    height: 100%;
+    height: 70%;
     display: flex; 
     align-items: center;
+    align-self: center;
 `;
 
 const LinksWrapper = styled.ul`
     margin: 0;
     padding: 0;
     display: flex;
-    height: 100%;
+    height: 85%;
+    
     list-style: none;
 `;
 
 const LinkItem = styled.li`
     height: 100%;
     padding: 0 1.1em;
-    color: #cecdcd;
+    color: #FFFFFF;
+    margin: 0 .2em;
     font-weight: 500;
     font-size: 14px;
     align-items: center;
@@ -30,13 +33,12 @@ const LinkItem = styled.li`
     transition: all 220ms ease-in-out; 
 
     &:hover {
-        border-top: 2px solid #f1c40f;
-        color: #f1c40f;
+        background: #FFFFFF;
+        color: #000;
     }
 
     &.active {
-        border-top: 2px solid #f1c40f;
-        color: #f1c40f;
+        background: #FFFFFF;
     }
 `;
 

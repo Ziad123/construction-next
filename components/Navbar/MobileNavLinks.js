@@ -4,9 +4,10 @@ import { MenuToggle } from "./MenuToggle";
 import { useRouter } from 'next/router'
 
 const NavLinkContainer = styled.div`
-    height: 100%;
+    height: 70%;
     display: flex; 
     align-items: center;
+    align-self: center;
 `;
 
 const LinksWrapper = styled.ul`
@@ -27,10 +28,9 @@ const LinksWrapper = styled.ul`
 
     z-index: 999;
     @media only screen and (max-width: 1140px) {
-        background: #000000;
+        background: #FFFFFF;
         float: none;
         margin: 0 !important;
-        background: #2c2c2c;
         border: 1px solid #ffffff;
         border-top: none;
     }
@@ -44,7 +44,7 @@ const LinkItem = styled.li`
     font-size: 14px;
     display: flex;
     @media only screen and (max-width: 1140px) {
-        color: #fff;
+        color: #222;
         border-top: 1px solid rgba(255, 255, 255, 1) !important;
         border-bottom: none;
         opacity: 1;
