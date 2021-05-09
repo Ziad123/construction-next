@@ -1,24 +1,26 @@
 
-import Slider from 'react-animated-slider';
-import HeroBanner from './HeroBanner';
+import { Fade } from 'react-slideshow-image'
 import styled from 'styled-components'
 
 
 const Button = styled.a`
-    margin-top: 5px;
+    margin-top: 22px;
     line-height: 24px;
-    color: #252525;
+    color: #ffffff;
+    z-index: 11000;
     font-size: 1em;
     font-weight: 500;
-    background: #F7BD00;
+    background: #62be1e;
+    text-transform: uppercase;
     display: inline-block;
-    padding: 12px 40px;
-    border-radius: 50px;
-    border: 2px solid #F7BD00;
+    padding: 12px 30px;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     --webkit-transition: all 0.3s ease;
-    cursor: pointer;
+
+    &:hover {
+        background: #FEAB48 !important;
+    }
 
     @media only screen and (max-width: 400px) {
         font-size: 0.6em;
@@ -31,20 +33,17 @@ export default function Hero() {
 
     const slides = [
         {
-            title: "IMAGINER ENSEMBLE LES VILLES DE DEMAIN ET LES CONSTRUIRE",
+            title: "JARDINS EXPERTS MAROC",
             titleColor: '#ffffff',
-            button: 'NOS PROJETS',
-            href: '/projects',
-            imgPath: '/img/city2.jpg',
-
-        },
-        {
-            title: 'GARE CGV',
-            city: 'Rabat',
-            titleColor: '#ffffff',
-            button: 'Lire Plus',
-            href: '/projects/i',
-            imgPath: '/slider/gare.jpg'
+            button: "Besoin de Services d'Urgence?",
+            href: '/',
+            imgPath: '/slider/slider-1.jpg',
+        }, {
+            title: 'Hello there',
+            titleColor: "#FFF",
+            button: 'Hell',
+            href: '/',
+            imgPath: '/slider/slider-1.jpg'
         }
     ]
 
@@ -52,28 +51,28 @@ export default function Hero() {
 
     return (
         <>
-            <Slider touchDisabled={true} autoplay={2000} className="slider-wrapper">
+            <Fade className="slider-wrapper">
                 {
                     slides.map((slide, index) =>
                         <div key={index}
                             className="slider-content"
                             style={{
                                 background: `url('${slide.imgPath}') black`,
-                                minHeight: '100%',
+                                height: '70vh',
                                 backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
                                 backgroundSize: "cover",
                                 textAlign: 'center',
                                 display: 'flex',
-                                alignItems: 'flex-end',
-                                paddingRight: '15vw',
+                                alignItems: 'center',
+                                
                                 justifyContent: 'center',
                                 color: `${slide.titleColor}`,
                                 flexFlow: 'column'
                             }}>
-                            <div className="inner" style={{ width: '40%' }}>
+                            <div className="inner" style={{ minWidth: '40%' }}>
                                 <h1 style={{
-                                    fontSize: '1.2em',
+                                    fontSize: '2em',
                                 }}>{slide.title}</h1>
                                 {slide.city && <h2>{slide.city}</h2>}
                                 <p style={{
@@ -84,8 +83,8 @@ export default function Hero() {
                         </div>
                     )
                 }
-            </Slider>
-            <HeroBanner />
+            </Fade>
+            
         </>
     )
 }

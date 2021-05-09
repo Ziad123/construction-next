@@ -1,22 +1,12 @@
 import Layout from '../components/Layout'
-
-
-import ProjectsSection from '../components/Sections/ProjectsSection'
-import Testimonials from '../components/Sections/Testimonials'
-import VideoSection from '../components/Sections/VideoSection'
-import Contact from '../components/Sections/Contact'
 import Hero from '../components/Hero'
-import CallToActionSection from '../components/Sections/CallToActionSection'
+import Services from '../components/Sections/ServiceSection'
 
 export default function Home() {
   return (
     <Layout>
       <Hero />
-      <VideoSection />
-      <ProjectsSection />
-      <CallToActionSection />
-      <Testimonials />
-      <Contact />
+      <Services />
     </Layout>
   )
 }
